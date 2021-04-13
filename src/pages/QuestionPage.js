@@ -1,21 +1,17 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Button from '../components/common/Button';
 import Responsive from '../components/common/Responsive';
 import styled from 'styled-components';
-import Quiz from '../components/common/Quiz';
+import Quiz from '../components/quizs/Quiz';
+import Wrapper from '../components/common/Wrapper';
 
-const Qdiv = styled(Responsive)`
-    
-`;
-
-const QuestionPage = () =>{
+const question = () =>{
     return(
         <>
-        <Qdiv>
-            <Quiz />    
-        </Qdiv>    
+        <Quiz />    
         </>
     );
 };
 
-export default QuestionPage;
+export default question;
