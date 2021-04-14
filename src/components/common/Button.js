@@ -4,9 +4,9 @@ import styled from 'styled-components';
 const StyledButton = styled.button`
     border: none;
     border-radius: 4px;
-    width: 80%;
-    font-size: 1.5em;
-    font-weight: bold;
+    width: ${props=>props.width || "80%"};
+    font-size: ${props=>props.fontSize || "1.5em"};
+    font-weight: ${props=>props.weight || "bold"};
     padding: .5em .5em;
     background: #139af8;
     color: white;

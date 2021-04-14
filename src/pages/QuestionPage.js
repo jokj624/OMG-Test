@@ -3,15 +3,15 @@ import { withRouter } from 'react-router-dom';
 import Button from '../components/common/Button';
 import Responsive from '../components/common/Responsive';
 import styled from 'styled-components';
-import Quiz from '../components/quizs/Quiz';
+import QuizCard from '../components/quizs/Quizcard';
 import Wrapper from '../components/common/Wrapper';
 
-const question = () =>{
+const QuestionPage = ({ match }) =>{
     return(
         <>
-        <Quiz />    
+        <QuizCard match={match} />    
         </>
     );
 };
 
-export default question;
+export default QuestionPage;

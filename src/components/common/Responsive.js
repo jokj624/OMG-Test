@@ -12,4 +12,5 @@ const Responsive = ({ children, ...rest }) => {
   return <ResponsiveBlock {...rest}>{children}</ResponsiveBlock>;
 };
 
+
 export default Responsive;

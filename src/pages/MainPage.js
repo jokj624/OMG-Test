@@ -2,11 +2,11 @@
 import React from 'react';
 import Main from '../components/common/Main';
 
-function main() {
+function MainPage() {
     return (
       <>
         <Main/>
       </>
     );
   }
-  export default main;
+  export default MainPage;
