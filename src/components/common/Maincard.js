@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Responsive from './Responsive';
 import styled from 'styled-components';
 import omg from '../../img/omgmain_ver2.png';
 import Wrapper from './Wrapper';
@@ -21,7 +20,7 @@ const useStyles = makeStyles({
     height: '700px',
     margin: '0',
     padding : '0',
-    boxShadow: '5px 5px 5px 3px #616161',
+    boxShadow: '3px 3px 3px 3px #616161',
     borderRadius : "16px",
   },
   title: {
@@ -44,8 +43,6 @@ const Img = styled.img`
     margin-top : 60px;
     margin-bottom : 50px;
 `
-
-
 const MainCard = ({ history }) => {
   const classes = useStyles();
   return (
@@ -55,10 +52,10 @@ const MainCard = ({ history }) => {
         <CardContent style = {{height : "700px"}}>
             <Img src={omg}/>
             <Typography className={classes.title}>재미로 보는</Typography>
-            <Typography className={classes.title}>나와 비슷한 <span style = {{ color : "#f595d2"}}>오마이걸</span> 멤버는?</Typography>
+            <Typography className={classes.title}>나와 비슷한 <span style = {{ color : "#f595d2", fontSize: "1.25em"}}>오마이걸</span> 멤버는?</Typography>
             <Button className={classes.button} style = {{background : "#712dad"}}
               onClick={()=> {
-                history.push("/question");
+                history.push("/question/1");
               }}>START!</Button>
         </CardContent>
     </Card>
