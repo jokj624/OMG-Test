@@ -118,7 +118,7 @@ const Resultcard = () => {
             + "&url=" + encodeURIComponent(window.location.href)
         );
 
-    };
+    };    
 
     return (
         <>
