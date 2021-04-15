@@ -9,11 +9,8 @@ const Progress = styled.div`
     font-family: 'TTTogether';
     border-radius: 20px;
     height: 100%;
-    width: 100%;
-    margin : 0 auto;   
-    @media (max-width: 350px) {
-        width: 300px;
-    }
+    width: 80%;
+    margin : 0 auto;
 
 `;
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Responsive from './Responsive';
 
 const WrapperDiv = styled(Responsive)`
-    height: 90%;
+    min-height: 100%;
 `
 
 const Wrapper = (props) => {

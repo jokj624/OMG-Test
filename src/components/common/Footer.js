@@ -3,11 +3,9 @@ import styled from 'styled-components';
 
 const Footerdiv = styled.div`
     position : relative;
-    bottom: 0;
-    left: 0;
+    height: 6em;
     width : 100%;
-    height: 100px;
-    background-color : rgb(173, 189, 255);
+    background-color : #2E294E;
     text-align : center;
     p {
         font-size : 0.8rem;
@@ -17,6 +15,7 @@ const Footerdiv = styled.div`
 
 const Text = styled.div`
     padding-top : 18px;
+    color: white
 `
 
 const Footer = () => {

@@ -2,10 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ResponsiveBlock = styled.div`
+  display: flex;
+  align-items : center;
+  justify-content: center;
   width: 350px;
   margin: 0 auto; /* 중앙 정렬 */
   @media (max-width : 349px) {
-    width : 100%;
+    width : 90%;
 }
 
 `;

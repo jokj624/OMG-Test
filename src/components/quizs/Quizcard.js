@@ -12,7 +12,6 @@ import '../common/Main.css';
 
 const Question = styled.div`
   text-align : center;
-  height : 700px;
   margin : 0;
   padding : 0;
 `;
@@ -23,7 +22,7 @@ const Spacer = styled.div`
 
 const useStyles = makeStyles({
     title: {
-      fontSize: 22,
+      fontSize: 20,
       marginBottom : '10px',
       marginTop : '10px',
       textAlign: "center",
@@ -42,7 +41,6 @@ const QuizCard = ({ match }) => {
     const classes = useStyles();
     const [curQuiz, setQuiz] = useState({});
     const [id, setId] = useState(0);
-    const [showResult, setShowResult] = useState(false);
 
     useEffect(()=>{
       const num = parseInt(match.params.id);
@@ -68,7 +66,6 @@ const QuizCard = ({ match }) => {
 
     return(
         <Wrapper>
-          <Spacer/>
           {match.params.id < 10 &&
             <Question>
                 <Typography className={classes.title}>{match.params.id}/10</Typography><br/>
@@ -78,7 +75,7 @@ const QuizCard = ({ match }) => {
                 {curQuiz.answer && curQuiz.answer.map((item, index)=>(
                  <Link to={`/question/${id}`} key={index} >
                     <Button className={classes.button} 
-                    weight={"normal"} width={"85%"} fontSize={"1.3em"} onClick={() => getScore(item.name)}>{item.text} </Button> 
+                    weight={"normal"} width={"85%"} fontSize={"1.2em"} color={"black"} background={"#D1B6E1"} onClick={() => getScore(item.name)}>{item.text} </Button> 
                  </Link>
                 ))}
             </Question>
@@ -91,7 +88,8 @@ const QuizCard = ({ match }) => {
                 {curQuiz.answer && curQuiz.answer.map((item, index)=>(
                  <Link to={`/result`} key={index}>
                     <Button className={classes.button} 
-                    weight={"normal"} width={"85%"} fontSize={"1.3em"} onClick={() => getScore(item.name)}>{item.text}</Button> 
+                    weight={"normal"} width={"85%"} fontSize={"1.3em"} color={"black"} background={"#D1B6E1"} 
+                    onClick={() => getScore(item.name)}>{item.text}</Button> 
                  </Link>
                 ))}
             </Question>

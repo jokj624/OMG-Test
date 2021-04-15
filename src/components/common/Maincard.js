@@ -49,7 +49,6 @@ const MainCard = ({ history }) => {
   return (
     <>
     <Wrapper>
-      <Spacer />
     <Main>
       <Img src={omg}/>
       <Typography className={classes.title}>재미로 보는</Typography>
