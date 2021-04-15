@@ -4,6 +4,10 @@ import styled from 'styled-components';
 const ResponsiveBlock = styled.div`
   width: 350px;
   margin: 0 auto; /* 중앙 정렬 */
+  @media (max-width : 349px) {
+    width : 100%;
+}
+
 `;
 
 const Responsive = ({ children, ...rest }) => {

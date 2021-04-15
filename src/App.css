@@ -1,8 +1,15 @@
-body {
+html{
+  overflow: auto;
+}
+html, body {
+  margin : 0;
+  padding: 0;
   height: 100%;
-  background-color: #EEE29F;
+  background-color:#21024d;
 }
 
 #root {
-    height: 100%;
+  margin : 0;
+  height: 100%;
 }
+
