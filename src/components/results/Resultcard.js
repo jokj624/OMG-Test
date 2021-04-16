@@ -16,6 +16,9 @@ const Result = styled.div`
   text-align : center;
   margin : 0;
   padding : 0;
+  li {
+    margin-top : 7px;
+  }
 `;
 
 const useStyles = makeStyles({
@@ -50,9 +53,9 @@ const Img = styled.img`
   `;
 
 const Textbox = styled.div`
-    border : 0.5px solid white;
-    border-radius : 10%;
-    padding : 25px;
+    padding : 30px;
+    background-color : rgb(0, 0, 0, 0.15);
+    margin-bottom : 30px;
   `;
 const Subtitle = styled.div`
     color : white;
@@ -65,6 +68,7 @@ const Subtitle = styled.div`
 const Text = styled.div`
   color : white;
   text-align : left;
+  font-family: 'IBMPlexSansKR-Regular';
 `;
 const Share = styled.div`
     font-size : 1.2em;
