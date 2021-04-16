@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Wrapper from '../common/Wrapper';
 import { Link, withRouter } from 'react-router-dom';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, rgbToHex } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import quiz from '../../pages/contents/question';
 import score from '../../pages/contents/score';
@@ -22,7 +22,7 @@ const Spacer = styled.div`
 
 const useStyles = makeStyles({
     title: {
-      fontSize: 20,
+      fontSize: 21,
       marginBottom : '10px',
       marginTop : '10px',
       textAlign: "center",
@@ -31,8 +31,8 @@ const useStyles = makeStyles({
     },
     button: {
       textAlign: "center",
-      fontFamily: 'Y_Spotlight',
-      marginTop: '5%',
+      fontFamily: 'IBMPlexSansKR-Regular',
+      marginTop: '5%'
     },
   });
 
@@ -75,7 +75,7 @@ const QuizCard = ({ match }) => {
                 {curQuiz.answer && curQuiz.answer.map((item, index)=>(
                  <Link to={`/question/${id}`} key={index} >
                     <Button className={classes.button} 
-                    weight={"normal"} width={"85%"} fontSize={"1.2em"} color={"black"} background={"#D1B6E1"} onClick={() => getScore(item.name)}>{item.text} </Button> 
+                    weight={"normal"} width={"85%"} fontSize={"1.1em"} color={"black"} onClick={() => getScore(item.name)}>{item.text} </Button> 
                  </Link>
                 ))}
             </Question>
@@ -88,7 +88,7 @@ const QuizCard = ({ match }) => {
                 {curQuiz.answer && curQuiz.answer.map((item, index)=>(
                  <Link to={`/result`} key={index}>
                     <Button className={classes.button} 
-                    weight={"normal"} width={"85%"} fontSize={"1.3em"} color={"black"} background={"#D1B6E1"} 
+                    weight={"normal"} width={"85%"} fontSize={"1.1em"} color={"black"} 
                     onClick={() => getScore(item.name)}>{item.text}</Button> 
                  </Link>
                 ))}

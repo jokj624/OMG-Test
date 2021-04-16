@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Wrapper from '../common/Wrapper';
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,11 +12,15 @@ import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import '../common/Main.css';
 import Footer from '../common/Footer';
+import $ from 'jquery';
 
 const Result = styled.div`
   text-align : center;
   margin : 0;
   padding : 0;
+  li {
+    margin-top : 7px;
+  }
 `;
 
 const useStyles = makeStyles({
@@ -50,9 +55,9 @@ const Img = styled.img`
   `;
 
 const Textbox = styled.div`
-    border : 0.5px solid white;
-    border-radius : 10%;
-    padding : 25px;
+    padding : 30px;
+    background-color : rgb(0, 0, 0, 0.15);
+    margin-bottom : 30px;
   `;
 const Subtitle = styled.div`
     color : white;
@@ -65,6 +70,7 @@ const Subtitle = styled.div`
 const Text = styled.div`
   color : white;
   text-align : left;
+  font-family: 'IBMPlexSansKR-Regular';
 `;
 const Share = styled.div`
     font-size : 1.2em;
@@ -86,10 +92,24 @@ const ShareBox = styled.div`
     }
   `;
 
+  const Notice = styled.div`
+    display : none;
+    position : fixed;
+    background : rgb(0,0,0, 0.8);
+    color : white;
+    z-index : 1000;
+    width : 300px;
+    height : 50px;
+    align-items : center;
+    justify-content : center;
+    border-radius : 6px;
+  `;
+
 const Resultcard = () => {
     const [omg, setOmg] = useState(0);
     const [omgsrc, setSrc] = useState('');
     const [showResult, setShowResult] = useState(false);
+    const [showNotice, setNotice] = useState(false);
     const classes = useStyles();
 
     useEffect(() => {
@@ -116,11 +136,17 @@ const Resultcard = () => {
     const copyUrl = (e) => {
         if(!document.queryCommandSupported("copy")){
             return alert("복사 기능이 지원 되지 않는 브라우저입니다.");
+        } else{
+            copyUrlRef.current.select();
+            document.execCommand('copy');
+            e.target.focus();
+            //링크 복사 함수
+            $(".show").css("display", "flex");
+            const time= setTimeout(() => {
+                $(".show").css("display", "none");
+            }, 1000);
+            
         }
-        copyUrlRef.current.select();
-        document.execCommand('copy');
-        e.target.focus();
-        //링크 복사 함수
     } 
     const shareTwitter = () => {
         window.open("https://twitter.com/intent/tweet"
@@ -165,7 +191,7 @@ const Resultcard = () => {
                         <button onClick={copyUrl} >
                             <FontAwesomeIcon icon={faLink} size="2x" color="white" /><Share>링크 복사</Share>
                             <form>
-                                <textarea ref={copyUrlRef} defaultValue={window.location.href} />
+                                <textarea ref={copyUrlRef} defaultValue={window.location.href} readOnly />
                             </form>
                         </button>
                     </ShareBox>
@@ -174,6 +200,7 @@ const Resultcard = () => {
             {!showResult &&
                 <LoadingBar done={100} />
             }
+                <Notice className = "show">클립보드에 링크가 복사되었습니다.</Notice>
         </Wrapper>
         {showResult && <Footer />}
         </>
@@ -181,4 +208,3 @@ const Resultcard = () => {
 };
 
 export default Resultcard;
-

@@ -8,10 +8,9 @@ const StyledButton = styled.button`
     font-size: ${props=>props.fontSize || "1.5em"};
     font-weight: ${props=>props.weight || "bold"};
     padding: .5em .5em;
-    background: ${props=>props.background || "#139af8"};
+    background: ${props=>props.background || "#ae9df5"};
     color: ${props=>props.color || "white"};
     outline: none;
-    box-shadow : 2px 2px 5px #999;
 `;
 
 const Button = (props) => {
