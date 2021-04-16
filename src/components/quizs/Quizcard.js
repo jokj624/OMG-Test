@@ -41,7 +41,7 @@ const QuizCard = ({ match }) => {
     const classes = useStyles();
     const [curQuiz, setQuiz] = useState({});
     const [id, setId] = useState(0);
-
+    const [member, setMember] = useState('');
     useEffect(()=>{
       const num = parseInt(match.params.id);
       console.log(num);
@@ -61,7 +61,21 @@ const QuizCard = ({ match }) => {
           score[1].maxOmg = name;
         }
       }));
-      console.log(score);
+      if(score[1].maxOmg === '유아'){
+        setMember('yooa');
+      } else if(score[1].maxOmg === '효정'){
+        setMember('hyojeong');
+      } else if(score[1].maxOmg === '지호'){
+        setMember('jiho');
+      } else if(score[1].maxOmg === '미미'){
+        setMember('mimi');
+      } else if(score[1].maxOmg === '비니'){
+        setMember('binie');
+      } else if(score[1].maxOmg === '아린'){
+        setMember('arin');
+      } else if(score[1].maxOmg === '승희'){
+        setMember('seunghee');
+      } //주소 지정에 필요
     };
 
     return(
@@ -86,7 +100,7 @@ const QuizCard = ({ match }) => {
                 <Typography className={classes.title}>{curQuiz.question}</Typography>
                 <br/>
                 {curQuiz.answer && curQuiz.answer.map((item, index)=>(
-                 <Link to={`/result`} key={index}>
+                 <Link to={`/result/${member}`} key={index}>
                     <Button className={classes.button} 
                     weight={"normal"} width={"85%"} fontSize={"1.1em"} color={"black"} 
                     onClick={() => getScore(item.name)}>{item.text}</Button> 

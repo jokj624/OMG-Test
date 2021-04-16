@@ -2,10 +2,10 @@
 import React from 'react';
 import ResultCard from '../components/results/Resultcard';
 
-function result() {
+function result({ match }) {
     return (
       <>
-        <ResultCard/>
+        <ResultCard match={match}/>
       </>
     );
 }
