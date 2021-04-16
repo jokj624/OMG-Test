@@ -14,7 +14,7 @@ function App() {
     </Helmet>
     <Route component={MainPage} path="/" exact />
     <Route component={QuestionPage} path='/question/:id'  />
-    <Route component={ResultPage} path='/result'/>
+    <Route component={ResultPage} path='/result/:member'/>
     </>
   );
 }

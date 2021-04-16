@@ -5,7 +5,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import result from '../../pages/contents/result';
 import styled from 'styled-components';
-import score from '../../pages/contents/score';
 import LoadingBar from '../common/LoadingBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons';
@@ -105,22 +104,21 @@ const ShareBox = styled.div`
     border-radius : 6px;
   `;
 
-const Resultcard = () => {
+const Resultcard = ({ match }) => {
     const [omg, setOmg] = useState(0);
     const [omgsrc, setSrc] = useState('');
     const [showResult, setShowResult] = useState(false);
-    const [showNotice, setNotice] = useState(false);
     const classes = useStyles();
 
     useEffect(() => {
-        const str = score[1].maxOmg;
-        if (str === "효정") setOmg(0);
-        else if (str === "미미") setOmg(1);
-        else if (str === "유아") setOmg(2);
-        else if (str === "승희") setOmg(3);
-        else if (str === "지호") setOmg(4);
-        else if (str === "비니") setOmg(5);
-        else setOmg(6);
+        const str = match.params.member;
+        if (str === "hyojeong") setOmg(0);
+        else if (str === "mimi") setOmg(1);
+        else if (str === "yooa") setOmg(2);
+        else if (str === "seunghee") setOmg(3);
+        else if (str === "jiho") setOmg(4);
+        else if (str === "binie") setOmg(5);
+        else if(str === "arin") setOmg(6);
         //maxOmg 에 따른 index 설정
         const source = result[omg].img;
         const newLocal = require(`../../img/${source}`);        //img source 설정 
@@ -142,9 +140,10 @@ const Resultcard = () => {
             e.target.focus();
             //링크 복사 함수
             $(".show").css("display", "flex");
-            const time= setTimeout(() => {
+            const time = setTimeout(() => {
                 $(".show").css("display", "none");
             }, 1000);
+            return () => clearTimeout(time);
             
         }
     } 
