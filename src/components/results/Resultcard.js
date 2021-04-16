@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import Wrapper from '../common/Wrapper';
 import { makeStyles } from '@material-ui/core/styles';
@@ -190,7 +191,7 @@ const Resultcard = () => {
                         <button onClick={copyUrl} >
                             <FontAwesomeIcon icon={faLink} size="2x" color="white" /><Share>링크 복사</Share>
                             <form>
-                                <textarea ref={copyUrlRef} defaultValue={window.location.href} />
+                                <textarea ref={copyUrlRef} defaultValue={window.location.href} readOnly />
                             </form>
                         </button>
                     </ShareBox>
@@ -207,4 +208,3 @@ const Resultcard = () => {
 };
 
 export default Resultcard;
-
