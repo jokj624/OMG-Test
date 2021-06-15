@@ -1,3 +1,5 @@
+<div align="center">
+
 # OMG-Test
 🤷 재미로 보는 나와 비슷한 오마이걸 멤버는?! 🤷   
 성격 테스트 입니다!   
@@ -9,6 +11,7 @@
 <img src ="https://user-images.githubusercontent.com/20807197/115034661-b8900b00-9f06-11eb-9932-4d0f4474af3f.jpeg" width="300px" height="600px"> </img>
 <img src ="https://user-images.githubusercontent.com/20807197/115034736-cba2db00-9f06-11eb-9351-5896ae6ddf37.jpeg" width="300px" height="600px"> </img>
 
+</div>
 
 ### 사용 프레임워크 
 * React   
@@ -38,3 +41,8 @@
     "web-vitals": "^1.0.1"
 ```   
 
+### Developers   
+| 채정아 | 김시원 |
+| :---: | :---: |
+|<img src="https://user-images.githubusercontent.com/20807197/122017757-371d0200-cdfd-11eb-8a3f-3e13b96acaac.jpg" width="250px" height="250px" />|<img src ="https://user-images.githubusercontent.com/20807197/122018217-9d098980-cdfd-11eb-9d09-0a26718594b3.jpg" width = "250px" height="250px" />|
+|[jokj624](https://github.com/jokj624)|[coolkimg99](https://github.com/coolkim99)|
