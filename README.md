@@ -44,5 +44,6 @@
 ### Developers   
 | 채정아 | 김시원 |
 | :---: | :---: |
-|<img src="https://user-images.githubusercontent.com/20807197/122017757-371d0200-cdfd-11eb-8a3f-3e13b96acaac.jpg" width="250px" height="250px" />|<img src ="https://user-images.githubusercontent.com/20807197/122018217-9d098980-cdfd-11eb-9d09-0a26718594b3.jpg" width = "250px" height="250px" />|
+|<img src="https://user-images.githubusercontent.com/20807197/122161042-f5976000-ceab-11eb-88ec-b4f58ab7d208.jpg" width="200px" height="200px" />|<img src ="https://user-images.githubusercontent.com/20807197/122161168-30999380-ceac-11eb-974f-ff9ac40fe320.png" width = "200px" height="200px" />|
 |[jokj624](https://github.com/jokj624)|[coolkim99](https://github.com/coolkim99)|
+
